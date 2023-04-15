@@ -1,0 +1,1 @@
+V mapci `/moje` lahko hranite svoje zapiske, kodo, ipd.:)

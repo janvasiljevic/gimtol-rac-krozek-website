@@ -1,0 +1,18 @@
+---
+interface Props {
+  githubLink: string;
+  imageLink: string;
+  name: string;
+}
+
+const { githubLink, imageLink, name } = Astro.props;
+---
+
+<div class="flex flex-col justify-center items-center gap-4 max-w-xs">
+  <div
+    class="rounded-full border-solid overflow-clip border-primary-main outline outline-primary-main outline-offset-8 outline-2"
+  >
+    <img class="grayscale" src={imageLink} alt={name + "- profilna slika"} />
+  </div>
+  <a href={githubLink}> {name}</a>
+</div>

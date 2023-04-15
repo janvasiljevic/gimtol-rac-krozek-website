@@ -1,0 +1,17 @@
+---
+import PageMeta from "../components/PageMeta.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+import Intro from "../components/Intro.astro";
+import QuickIntro from "../components/QuickIntro.astro";
+import { SITE_TITLE } from "../config";
+import Mentors from "src/components/Mentors.astro";
+---
+
+<PageLayout>
+  <PageMeta title={`${SITE_TITLE} | GimTol`} slot="meta" />
+  <Fragment slot="main">
+    <Intro />
+    <QuickIntro />
+    <Mentors />
+  </Fragment>
+</PageLayout>

@@ -1,0 +1,37 @@
+---
+import { MarkdocRenderer } from "astro-markdoc-renderer";
+import { SITE_DESCRIPTION } from "src/config";
+import { components } from "./Renderer.astro";
+
+type Props = {
+  children: string;
+};
+
+const { children } = Astro.props;
+---
+
+<details>
+  <summary class="summary"> ⭐ Rešitev</summary>
+  <div class="children">
+    <MarkdocRenderer content={children} components={components} />
+  </div>
+</details>
+
+<style>
+  .summary {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    color: var(--color-text-link);
+  }
+
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .children {
+    margin-left: 2rem;
+  }
+</style>
